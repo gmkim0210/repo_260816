@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>다낭 가족 여행 — Richico 4박5일</title>
+  <meta name="description" content="2026.12.08–12 · Richico 2BR · ICN · 가족 4인. 풀 중심 일정과 200만 이내 예산 요약." />
+  <meta name="theme-color" content="#0c4a5e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sea: #0c4a5e;
+      --sea-deep: #083445;
+      --foam: #e8f4f6;
+      --sand: #f7f1e6;
+      --ink: #1a2a30;
+      --muted: #4a6169;
+      --accent: #c45c26;
+      --line: rgba(12, 74, 94, 0.12);
+      --ok: #1f6b4a;
+      --radius: 14px;
+      --pad: clamp(1.1rem, 4.5vw, 1.6rem);
+      --max: 36rem;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(120% 80% at 100% -10%, rgba(12, 74, 94, 0.08), transparent 55%),
+        radial-gradient(90% 60% at -10% 20%, rgba(196, 92, 38, 0.07), transparent 50%),
+        linear-gradient(180deg, var(--foam) 0%, var(--sand) 42%, #fff 100%);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad) 3rem;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      margin: 0 calc(-1 * var(--pad));
+      padding: calc(1.4rem + env(safe-area-inset-top)) var(--pad) 1.75rem;
+      background:
+        linear-gradient(165deg, rgba(8, 52, 69, 0.92) 0%, rgba(12, 74, 94, 0.88) 55%, rgba(12, 74, 94, 0.78) 100%),
+        url("https://richicohotel.com/wp-content/uploads/2022/10/62f270808e52400c1943-copy.jpg") center/cover no-repeat;
+      color: #f5fafb;
+      overflow: hidden;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 2.5rem;
+      background: linear-gradient(to bottom, transparent, var(--foam));
+      pointer-events: none;
+    }
+
+    .brand {
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(1.65rem, 6.2vw, 2.05rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.55rem;
+    }
+
+    .hero h1 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      opacity: 0.92;
+      margin-bottom: 0.85rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Sections */
+    section {
+      margin-top: 1.5rem;
+      animation: fadeUp 0.65s ease both;
+    }
+
+    section:nth-of-type(1) { animation-delay: 0.08s; }
+    section:nth-of-type(2) { animation-delay: 0.14s; }
+    section:nth-of-type(3) { animation-delay: 0.2s; }
+    section:nth-of-type(4) { animation-delay: 0.26s; }
+    section:nth-of-type(5) { animation-delay: 0.32s; }
+
+    h2 {
+      font-family: "Noto Serif KR", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--sea-deep);
+      margin-bottom: 0.7rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* Snapshot grid */
+    .snap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.55rem;
+    }
+
+    .snap div {
+      padding: 0.75rem 0.8rem;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .snap dt {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .snap dd {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--sea-deep);
+      line-height: 1.35;
+    }
+
+    .snap .full { grid-column: 1 / -1; }
+
+    /* Days */
+    .days {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .day {
+      display: grid;
+      grid-template-columns: 3.6rem 1fr;
+      gap: 0.65rem;
+      padding: 0.75rem 0.8rem;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--sea);
+    }
+
+    .day__tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--sea);
+      line-height: 1.35;
+    }
+
+    .day__tag span {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.68rem;
+    }
+
+    .day__body strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      color: var(--ink);
+    }
+
+    .day__body p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* Budget */
+    .budget {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .budget__head {
+      padding: 0.75rem 0.9rem;
+      background: var(--sea);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .budget__head em {
+      font-style: normal;
+      opacity: 0.85;
+      font-weight: 400;
+      font-size: 0.78rem;
+    }
+
+    .budget table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+
+    .budget th,
+    .budget td {
+      padding: 0.55rem 0.85rem;
+      text-align: left;
+      border-top: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .budget th {
+      font-weight: 500;
+      color: var(--muted);
+      width: 42%;
+    }
+
+    .budget td {
+      font-weight: 600;
+      color: var(--sea-deep);
+      text-align: right;
+    }
+
+    .budget tr.total th,
+    .budget tr.total td {
+      background: rgba(12, 74, 94, 0.06);
+      color: var(--ok);
+      font-weight: 700;
+    }
+
+    .hint {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 0 0.15rem;
+    }
+
+    /* Checklist */
+    .checks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .checks li {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+      padding: 0.65rem 0.75rem;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    .checks li::before {
+      content: "";
+      flex-shrink: 0;
+      width: 1.05rem;
+      height: 1.05rem;
+      margin-top: 0.12rem;
+      border-radius: 4px;
+      border: 1.5px solid var(--sea);
+      background: linear-gradient(135deg, transparent 45%, var(--sea) 45%);
+      opacity: 0.7;
+    }
+
+    /* Note */
+    .note {
+      margin-top: 1.6rem;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      background: rgba(196, 92, 38, 0.08);
+      border: 1px solid rgba(196, 92, 38, 0.22);
+      font-size: 0.82rem;
+      color: #6b3a1a;
+      line-height: 1.5;
+      animation: fadeUp 0.65s ease 0.36s both;
+    }
+
+    .note strong { font-weight: 700; }
+
+    footer {
+      margin-top: 1.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Print / Save as PDF */
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+        font-size: 11pt;
+      }
+      .wrap { max-width: none; padding: 0; }
+      .hero {
+        margin: 0 0 12pt;
+        padding: 14pt 12pt;
+        background: #0c4a5e !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color: #fff;
+      }
+      .hero::after { display: none; }
+      section { break-inside: avoid; margin-top: 12pt; animation: none; }
+      .day, .snap div, .checks li, .budget {
+        break-inside: avoid;
+        box-shadow: none;
+        background: #fff;
+        border-color: #ccc;
+      }
+      .budget__head {
+        background: #0c4a5e !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .note { border-color: #999; background: #f5f5f5; color: #333; }
+      footer { border-color: #ccc; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <p class="brand">Richico · 다낭 가족 여행</p>
+      <h1>4박5일 한눈에 보기</h1>
+      <div class="meta" aria-label="핵심 정보">
+        <span class="chip">2026.12.08–12</span>
+        <span class="chip">Richico 2BR</span>
+        <span class="chip">ICN 직항</span>
+        <span class="chip">가족 4인</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="snap-title">
+      <h2 id="snap-title">확정 요약</h2>
+      <dl class="snap">
+        <div>
+          <dt>인원</dt>
+          <dd>성인 2 · 여아 10 · 남아 4</dd>
+        </div>
+        <div>
+          <dt>위탁 수하물</dt>
+          <dd>성인 ×2 (아이 없음)</dd>
+        </div>
+        <div>
+          <dt>바나힐</dt>
+          <dd>제외</dd>
+        </div>
+        <div>
+          <dt>공항 이동</dt>
+          <dd>호텔 유료 셔틀</dd>
+        </div>
+        <div class="full">
+          <dt>해변 · 시설</dt>
+          <dd>미케 ~700m 도보 · 키즈풀 · 주방 · 시내 Grab</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="days-title">
+      <h2 id="days-title">일정 브리프</h2>
+      <div class="days">
+        <article class="day">
+          <div class="day__tag">D0<span>12/8 화</span></div>
+          <div class="day__body">
+            <strong>이동 · 체크인 · 풀</strong>
+            <p>ICN→DAD 아침 LCC → 셔틀 픽업 → 키즈풀만. 시내·해변은 다음날.</p>
+          </div>
+        </article>
+        <article class="day">
+          <div class="day__tag">D1<span>12/9 수</span></div>
+          <div class="day__body">
+            <strong>풀 + 한시장</strong>
+            <p>오전 풀 · 오후 Grab→한시장 30–60분(선택) · 저녁은 호텔 근처.</p>
+          </div>
+        </article>
+        <article class="day">
+          <div class="day__tag">D2<span>12/10 목</span></div>
+          <div class="day__body">
+            <strong>풀 · 해변 데이</strong>
+            <p>종일 수영·휴식. 해변 도보 ~10분 또는 짧은 Grab.</p>
+          </div>
+        </article>
+        <article class="day">
+          <div class="day__tag">D3<span>12/11 금</span></div>
+          <div class="day__body">
+            <strong>풀 + 용다리 (선택)</strong>
+            <p>짐·귀국 준비. 저녁 용다리 optional(금요 불꽃 확인). 피곤하면 스킵.</p>
+          </div>
+        </article>
+        <article class="day">
+          <div class="day__tag">D4<span>12/12 토</span></div>
+          <div class="day__body">
+            <strong>새벽 귀국</strong>
+            <p>전날 밤 셔틀 샌딩 → DAD→ICN 아침 도착 → 마곡.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="budget-title">
+      <h2 id="budget-title">예산 (추정)</h2>
+      <div class="budget">
+        <div class="budget__head">
+          항공+숙소 ≤ ~200만 KRW
+          <em> · 현지비 별도 · 바나힐 0</em>
+        </div>
+        <table>
+          <tbody>
+            <tr><th>항공 4인 왕복</th><td>115–145만</td></tr>
+            <tr><th>위탁 2개</th><td>8–16만</td></tr>
+            <tr><th>Richico 4박 2BR</th><td>45–56만</td></tr>
+            <tr><th>공항 셔틀 왕복</th><td>2–4만</td></tr>
+            <tr><th>Grab · 식사</th><td>28–47만</td></tr>
+            <tr class="total"><th>현실적 항공+숙소+위탁</th><td>~180–210만</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="hint">공격적 ~170–190만 ✅ · 현실적 경계권 · 항공 라이브가가 핵심.</p>
+    </section>
+
+    <section aria-labelledby="check-title">
+      <h2 id="check-title">체크리스트</h2>
+      <ul class="checks">
+        <li>항공 12/8 아침 · 12/11밤→12/12아침 · ICN–DAD</li>
+        <li>Richico 2BR + 10세 요금 확인</li>
+        <li>공항 셔틀 · 편명 호텔에 전달</li>
+        <li>위탁 2개만 왕복 선구매</li>
+        <li>여권 6개월+ · 만14세 미만 영문 가족관계증명서</li>
+        <li>수영복 · 상비약 · 슬리퍼 · 캐리온은 항공사 규정</li>
+      </ul>
+    </section>
+
+    <p class="note">
+      <strong>안내:</strong> 모든 금액·시간은 추정입니다. 예약 전 항공·숙소·셔틀을 라이브로 재검색하세요.
+      카카오톡에서는 이 페이지 <strong>링크</strong>를 붙여 넣는 편이 HTML 파일 첨부보다 잘 열립니다.
+      폰 브라우저에서 인쇄 → PDF로 저장도 가능합니다.
+    </p>
+
+    <footer>
+      Richico Apartment &amp; Hotel · My An / My Khe · 가족 4인 플랜 요약<br />
+      상세 플랜 문서 기반 · 2026-12 여행용
+    </footer>
+  </div>
+</body>
+</html>
